@@ -71,7 +71,7 @@ export default function Portfolio() {
               <Image
                 src={item.src || "/placeholder.svg"}
                 alt={item.alt}
-                fill
+                layout="fill"
                 objectFit="cover"
                 className="transition-transform duration-300 hover:scale-110"
               />
