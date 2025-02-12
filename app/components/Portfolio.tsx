@@ -8,7 +8,7 @@ import "react-image-lightbox/style.css"
 const portfolioItems = [
   { src: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739233999/jspftnqcfoxghndlwbyb.jpg", alt: "Luxury Home" },
   {
-    src: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739211200/vib5tctvjrk3wojkrhxa.jpg",
+    src: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739371610/tbsrxtmha0jlemlqi9ct.jpg",
     alt: "Modern Interior",
   },
   {
