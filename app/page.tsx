@@ -16,6 +16,8 @@ export default function Home() {
       <Prices />
       <Contact />
       <Footer />
+        <Analytics />
+        <SpeedInsights />
     </main>
   )
 }
