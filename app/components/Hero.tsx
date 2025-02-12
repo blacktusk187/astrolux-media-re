@@ -17,7 +17,7 @@ export default function Hero() {
         className="z-0"
       />
       <div className="z-10 text-center text-white">
-        <h1 className="text-5xl font-medium mb-4">Capture Your Property's Best Side</h1>
+        <h1 className="text-5xl font-medium mb-4">Capture Your Property&#39;s Best Side</h1>
         <p className="text-xl mb-8 font-lexend">Professional real estate photography that sells</p>
         <Button variant="outline" size="lg" className="bg-white text-black hover:bg-gray-100" asChild>
           <Link href="mailto:barnsleyt@gmail.com">Book Now</Link>
