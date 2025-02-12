@@ -16,7 +16,7 @@ const portfolioItems = [
     alt: "Cozy Cottage",
   },
   {
-    src: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739234245/odcph9vkit4nzk4nar7v.jpg",
+    src: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739370445/mgpxuy9xsmxpmnylglu7.jpg",
     alt: "Beachfront Property",
   },
   {
@@ -37,7 +37,7 @@ const portfolioItems = [
     alt: "Suburban Family Home",
   },
   {
-    src: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739309811/mk7wzi3nby7rxfqfsonr.jpg",
+    src: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739370018/rsog8xzxgwzb965xkseg.jpg",
     alt: "Penthouse View",
   },
   {
