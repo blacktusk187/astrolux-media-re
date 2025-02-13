@@ -36,18 +36,6 @@ const portfolioItems = [
     src: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739458889/a3ipnxeh6voulvhydprh.jpg",
     alt: "Suburban Family Home",
   },
-  {
-    src: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739370018/rsog8xzxgwzb965xkseg.jpg",
-    alt: "Penthouse View",
-  },
-  {
-    src: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739309893/kld30emygvd3zwkwriza.jpg",
-    alt: "Historic Mansion",
-  },
-  {
-    src: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739294943/ln65ex25adc52x5r8ltf.jpg",
-    alt: "Contemporary Kitchen",
-  },
 ]
 
 export default function Portfolio() {
