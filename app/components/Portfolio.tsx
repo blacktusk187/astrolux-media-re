@@ -29,7 +29,7 @@ const portfolioItems = [
     alt: "Rustic Cabin",
   },
   {
-    src: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739295347/oacj0gne1awhqjsxu5cm.jpg",
+    src: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739459012/nmr8vfkyvtbjfs03rpos.jpg",
     alt: "Minimalist Apartment",
   },
   {
