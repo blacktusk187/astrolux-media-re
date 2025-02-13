@@ -25,7 +25,7 @@ const portfolioItems = [
   },
   { src: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739234517/br9rwifiv5tmrihqlsuq.jpg", alt: "Urban Loft" },
   {
-    src: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739294457/ins9uxfxyorszqezn36n.jpg",
+    src: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739371610/tbsrxtmha0jlemlqi9ct.jpg",
     alt: "Rustic Cabin",
   },
   {
