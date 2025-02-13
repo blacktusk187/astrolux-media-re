@@ -20,7 +20,7 @@ const portfolioItems = [
     alt: "Beachfront Property",
   },
   {
-    src: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739234393/jp1cwtdowdznds2rbawj.jpg",
+    src: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739458042/wf6a3opn81hdmkebg0ly.jpg",
     alt: "Mountain Retreat",
   },
   { src: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739234517/br9rwifiv5tmrihqlsuq.jpg", alt: "Urban Loft" },
