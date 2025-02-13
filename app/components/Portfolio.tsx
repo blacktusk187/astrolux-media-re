@@ -16,7 +16,7 @@ const portfolioItems = [
     alt: "7524 Pebble Creek Dr 3",
   },
   {
-    src: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739370445/mgpxuy9xsmxpmnylglu7.jpg",
+    src: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739370018/rsog8xzxgwzb965xkseg.jpg",
     alt: "Beachfront Property",
   },
   {
