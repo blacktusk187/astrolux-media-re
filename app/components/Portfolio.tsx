@@ -6,14 +6,14 @@ import Lightbox from "react-image-lightbox"
 import "react-image-lightbox/style.css"
 
 const portfolioItems = [
-  { src: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739233999/jspftnqcfoxghndlwbyb.jpg", alt: "Luxury Home" },
+  { src: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739370445/mgpxuy9xsmxpmnylglu7.jpg", alt: "7524 Pebble Creek Dr 1" },
   {
-    src: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739371610/tbsrxtmha0jlemlqi9ct.jpg",
-    alt: "Modern Interior",
+    src: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739454464/hw8qqkuegw5renjrhapv.jpg",
+    alt: "7524 Pebble Creek Dr 2",
   },
   {
-    src: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739211193/orwahe3wlug9h7jnqoox.jpg",
-    alt: "Cozy Cottage",
+    src: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739454600/vxag4pzlfpimlvgmedyx.jpg",
+    alt: "7524 Pebble Creek Dr 3",
   },
   {
     src: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739370445/mgpxuy9xsmxpmnylglu7.jpg",
