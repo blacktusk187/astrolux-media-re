@@ -33,7 +33,7 @@ const portfolioItems = [
     alt: "Minimalist Apartment",
   },
   {
-    src: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739211196/sgvzuxp4z0zocrmwdpvm.jpg",
+    src: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739458889/a3ipnxeh6voulvhydprh.jpg",
     alt: "Suburban Family Home",
   },
   {
