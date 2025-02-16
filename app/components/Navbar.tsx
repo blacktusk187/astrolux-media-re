@@ -20,7 +20,7 @@ const rightNavItems = [
 ]
 
 const socialLinks = [
-  { name: "Instagram", href: "https://www.instagram.com/astroluxmedia", icon: Instagram },
+  { name: "Instagram", href: "https://www.instagram.com/astrolux_media", icon: Instagram },
   { name: "LinkedIn", href: "https://www.linkedin.com/company/astrolux-media", icon: Linkedin },
 ]
 

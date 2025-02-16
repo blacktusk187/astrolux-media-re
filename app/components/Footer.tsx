@@ -4,8 +4,8 @@ import { Instagram, Linkedin } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const socialLinks = [
-  { name: "Instagram", href: "https://www.instagram.com/astroluxmedia", icon: Instagram },
-  { name: "LinkedIn", href: "https://www.linkedin.com/company/astroluxmedia", icon: Linkedin },
+  { name: "Instagram", href: "https://www.instagram.com/astrolux_media", icon: Instagram },
+  { name: "LinkedIn", href: "https://www.linkedin.com/company/astrolux-media", icon: Linkedin },
 ]
 
 export default function Footer() {
