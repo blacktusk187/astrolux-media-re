@@ -1,12 +1,16 @@
 import Link from "next/link"
 import LogoIcon from "./LogoIcon"
-import { Jura } from "next/font/google"
+import { Instagram, Linkedin } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
-const jura = Jura({ subsets: ["latin"] })
+const socialLinks = [
+  { name: "Instagram", href: "https://www.instagram.com/astroluxmedia", icon: Instagram },
+  { name: "LinkedIn", href: "https://www.linkedin.com/company/astroluxmedia", icon: Linkedin },
+]
 
 export default function Footer() {
   return (
-      <footer className={`border-t ${jura.className}`}>
+      <footer className="border-t">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center py-8">
             <div className="mb-4 md:mb-0">
@@ -15,7 +19,7 @@ export default function Footer() {
                 Astrolux Media
               </Link>
             </div>
-            <div className="text-sm text-gray-600 text-center md:text-right">
+            <div className="text-sm text-gray-600 text-center md:text-right mb-4 md:mb-0">
               <p>
                 Phone:{" "}
                 <a href="tel:604-966-4148" className="hover:text-black transition-colors">
@@ -28,6 +32,16 @@ export default function Footer() {
                   barnsleyt@gmail.com
                 </a>
               </p>
+            </div>
+            <div className="flex space-x-2">
+              {socialLinks.map((link) => (
+                  <Link key={link.name} href={link.href} target="_blank" rel="noopener noreferrer">
+                    <Button variant="ghost" size="icon" className="text-black hover:text-gray-700">
+                      <link.icon className="h-5 w-5" />
+                      <span className="sr-only">{link.name}</span>
+                    </Button>
+                  </Link>
+              ))}
             </div>
           </div>
           <div className="border-t py-4 text-center text-sm text-gray-600">

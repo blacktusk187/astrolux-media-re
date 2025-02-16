@@ -1,10 +1,13 @@
 "use client"
 
-import React, { useState, useEffect } from "react"
+import type React from "react"
+
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import LogoIcon from "./LogoIcon"
+import { Instagram, Linkedin } from "lucide-react"
 
 const leftNavItems = [
   { name: "Services", href: "#services" },
@@ -14,6 +17,11 @@ const leftNavItems = [
 const rightNavItems = [
   { name: "Pricing", href: "#pricing" },
   { name: "Contact", href: "#contact" },
+]
+
+const socialLinks = [
+  { name: "Instagram", href: "https://www.instagram.com/astroluxmedia", icon: Instagram },
+  { name: "LinkedIn", href: "https://www.linkedin.com/company/astrolux-media", icon: Linkedin },
 ]
 
 export default function Navbar() {
@@ -73,6 +81,16 @@ export default function Navbar() {
                     </Link>
                 ))}
               </div>
+              <div className="flex space-x-2 ml-4">
+                {socialLinks.map((link) => (
+                    <Link key={link.name} href={link.href} target="_blank" rel="noopener noreferrer">
+                      <Button variant="ghost" size="icon" className="text-black hover:text-gray-700">
+                        <link.icon className="h-5 w-5" />
+                        <span className="sr-only">{link.name}</span>
+                      </Button>
+                    </Link>
+                ))}
+              </div>
             </div>
 
             {/* Mobile menu button */}
@@ -100,6 +118,16 @@ export default function Navbar() {
                           </Button>
                         </Link>
                     ))}
+                    <div className="flex justify-center space-x-4 mt-4">
+                      {socialLinks.map((link) => (
+                          <Link key={link.name} href={link.href} target="_blank" rel="noopener noreferrer">
+                            <Button variant="ghost" size="icon" className="text-black hover:text-gray-700">
+                              <link.icon className="h-5 w-5" />
+                              <span className="sr-only">{link.name}</span>
+                            </Button>
+                          </Link>
+                      ))}
+                    </div>
                   </div>
                 </SheetContent>
               </Sheet>
