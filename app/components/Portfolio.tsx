@@ -17,24 +17,24 @@ const portfolioItems = [
   },
   {
     src: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739370018/rsog8xzxgwzb965xkseg.jpg",
-    alt: "Beachfront Property",
+    alt: "2240 Nordic Drive",
   },
   {
     src: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739458042/wf6a3opn81hdmkebg0ly.jpg",
-    alt: "Mountain Retreat",
+    alt: "8031 Nicklaus North Blvd",
   },
-  { src: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739234517/br9rwifiv5tmrihqlsuq.jpg", alt: "Urban Loft" },
+  { src: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739234517/br9rwifiv5tmrihqlsuq.jpg", alt: "The Cabin at Sweetwater Lane" },
   {
-    src: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739371610/tbsrxtmha0jlemlqi9ct.jpg",
-    alt: "Rustic Cabin",
+    src: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739739308/ia3ncv6tffpvkmp6mdrv.jpg",
+    alt: "7524 Pebble Creek Dr 4",
   },
   {
     src: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739459012/nmr8vfkyvtbjfs03rpos.jpg",
-    alt: "Minimalist Apartment",
+    alt: "2240 Nordic Drive",
   },
   {
     src: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739458889/a3ipnxeh6voulvhydprh.jpg",
-    alt: "Suburban Family Home",
+    alt: "The Cabin at Sweetwater Lane",
   },
 ]
 
