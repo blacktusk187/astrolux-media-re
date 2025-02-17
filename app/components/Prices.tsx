@@ -1,30 +1,95 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import Image from "next/image"
+
+type ServiceOption = {
+  name: string
+  details?: string
+  price: string
+}
+
+type AdditionalService = {
+  title: string
+  description: string
+  image: string
+  options: ServiceOption[]
+  note?: string
+}
 
 const pricingPlans = [
   {
-    title: "Basic Photography Package",
+    title: "Basic",
     price: "$280",
     description: "Properties up to 1500 sqf",
     features: ["Up to 15 high-quality photos", "Premium editing", "24-hour delivery"],
   },
   {
-    title: "Standard Photography Package",
+    title: "Standard",
     price: "$350",
     description: "Properties from 1501 - 2500 sqf",
-    features: ["Up to 25 high-quality photos", "Premium editing", "24-hour delivery", "Fire added to fireplace"],
+    features: ["Up to 25 high-quality photos", "Premium editing", "36-hour delivery", "Drone photography"],
   },
   {
-    title: "Premium Photography Package",
+    title: "Premium",
     price: "$420",
     description: "Best for luxury properties",
     features: [
       "Up to 35 high-quality photos",
       "Premium editing",
-      "24-hour delivery",
+      "36-hour delivery",
+      "Drone photography",
       "Fire added to fireplace",
       "Water added to pool",
+    ],
+  },
+]
+
+const additionalServices: AdditionalService[] = [
+  {
+    title: "Walk-Thru Videos",
+    description: "Immersive property tours",
+    image: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739211200/vib5tctvjrk3wojkrhxa.jpg",
+    options: [
+      { name: "60 Second Instagram Video", details: "no music", price: "$449" },
+      { name: "2-3 minute full Video", details: "with music", price: "$599" },
+      { name: "Add an agent intro/voiceover", price: "+$99" },
+    ],
+  },
+  {
+    title: "Drone Packages",
+    description: "Aerial photography and videography",
+    image: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739234245/odcph9vkit4nzk4nar7v.jpg",
+    options: [
+      { name: "Add 6 drone shots to photo package", price: "$219" },
+      { name: "Drone Photography only", price: "$319" },
+      { name: "Add Drone and Exterior photos at Twilight", price: "$299" },
+    ],
+    note: "All Drone flights are weather and location dependent",
+  },
+  {
+    title: "Virtual Add-Ons",
+    description: "Enhance your listing with virtual staging and editing",
+    image: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739211193/orwahe3wlug9h7jnqoox.jpg",
+    options: [
+      { name: "Virtual Twilight", details: "Per Image", price: "$30" },
+      { name: "Virtual Staging", details: "Per Image", price: "$45" },
+      { name: "Object Removal", details: "Per Image", price: "$49" },
+      { name: "Object Removal - Clear Room", details: "Per Image", price: "$59" },
+      { name: "Rain to Shine", details: "Per Image", price: "$39" },
+      { name: "Water in Pool", details: "Per Image", price: "$39" },
+      { name: "Lawn Replacement", details: "Per Image", price: "$39" },
+    ],
+  },
+  {
+    title: "Floor Plans",
+    description: "Detailed property layouts",
+    image: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739234517/br9rwifiv5tmrihqlsuq.jpg",
+    options: [
+      { name: "2D Black & White with Measurements", details: "Under 2500 sq ft", price: "$99" },
+      { name: "2D Black & White with Measurements", details: "2501 – 4000 sq ft", price: "$139" },
+      { name: "2D Black & White with Measurements", details: "Over 4001 sq ft", price: "$179" },
+      { name: "MLS Room Measurements", details: "Text Only", price: "$39" },
     ],
   },
 ]
@@ -63,12 +128,65 @@ export default function Prices() {
                   <CardFooter>
                     <Button className="w-full" asChild>
                       <Link href={`mailto:barnsleyt@gmail.com?subject=${encodeURIComponent(plan.title)}%20Photo%20Set`}>
-                        Choose {plan.title}
+                        Choose {plan.title} Set
                       </Link>
                     </Button>
                   </CardFooter>
                 </Card>
             ))}
+          </div>
+          <div className="mt-16">
+            <h3 className="text-2xl font-bold text-center mb-8">Additional Services</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {additionalServices.map((service, index) => (
+                  <Card key={index} className="flex flex-col overflow-hidden">
+                    <div className="relative h-48">
+                      <Image
+                          src={service.image || "/placeholder.svg"}
+                          alt={service.title}
+                          layout="fill"
+                          objectFit="cover"
+                          className="transition-transform duration-300 hover:scale-105"
+                      />
+                    </div>
+                    <CardHeader>
+                      <CardTitle>{service.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent className="flex-grow">
+                      <CardDescription>{service.description}</CardDescription>
+                      {service.options && (
+                          <ul className="mt-4 space-y-2 text-sm">
+                            {service.options.map((option, i) => (
+                                <li key={i} className="flex justify-between items-start">
+                                  <div>
+                                    <span className="font-semibold">{option.name}</span>
+                                    {option.details && <span className="block text-xs text-gray-500">{option.details}</span>}
+                                  </div>
+                                  <span className="font-semibold">{option.price}</span>
+                                </li>
+                            ))}
+                          </ul>
+                      )}
+                      {service.note && <p className="mt-4 text-xs text-gray-500 italic">{service.note}</p>}
+                    </CardContent>
+                    <CardFooter>
+                      <Button variant="outline" className="w-full" asChild>
+                        <Link href={`mailto:barnsleyt@gmail.com?subject=${encodeURIComponent(service.title)}`}>
+                          {service.title === "Walk-Thru Videos"
+                              ? "Choose Walk-Thru"
+                              : service.title === "Drone Packages"
+                                  ? "Choose Drone Package"
+                                  : service.title === "Virtual Add-Ons"
+                                      ? "Choose Virtual Add-On"
+                                      : service.title === "Floor Plans"
+                                          ? "Choose Floor Plan"
+                                          : "Learn More"}
+                        </Link>
+                      </Button>
+                    </CardFooter>
+                  </Card>
+              ))}
+            </div>
           </div>
         </div>
       </section>
