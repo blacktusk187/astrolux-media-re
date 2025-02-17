@@ -4,26 +4,25 @@ import Link from "next/link"
 
 const pricingPlans = [
   {
-    title: "Basic",
+    title: "Basic Photography Package",
     price: "$280",
     description: "Properties up to 1500 sqf",
     features: ["Up to 15 high-quality photos", "Premium editing", "24-hour delivery"],
   },
   {
-    title: "Standard",
+    title: "Standard Photography Package",
     price: "$350",
     description: "Properties from 1501 - 2500 sqf",
     features: ["Up to 25 high-quality photos", "Premium editing", "24-hour delivery", "Drone photography"],
   },
   {
-    title: "Premium",
+    title: "Premium Photography Package",
     price: "$420",
     description: "Best for luxury properties",
     features: [
       "Up to 35 high-quality photos",
       "Premium editing",
       "24-hour delivery",
-      "Drone photography",
       "Fire added to fireplace",
       "Water added to pool",
     ],
@@ -64,7 +63,7 @@ export default function Prices() {
                   <CardFooter>
                     <Button className="w-full" asChild>
                       <Link href={`mailto:barnsleyt@gmail.com?subject=${encodeURIComponent(plan.title)}%20Photo%20Set`}>
-                        Choose {plan.title} Set
+                        Choose {plan.title}
                       </Link>
                     </Button>
                   </CardFooter>
