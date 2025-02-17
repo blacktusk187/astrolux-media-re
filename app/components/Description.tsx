@@ -10,7 +10,7 @@ export default function Description() {
                     <p className="mb-4 text-lg leading-relaxed">
                         High-quality photos are the calling
                         card of the property, they greatly increase the chances of a property being sold. Professional photos,
-                        videos, or drone video real estate can be crucial to how potential buyers see the property.
+                        videos, or drone video can be crucial to how potential buyers see the property.
                     </p>
                     <p className="mb-4 text-lg leading-relaxed">
                         <strong>Astrolux Media</strong> offers professional real estate photography services in the Sea To Sky and
