@@ -39,7 +39,7 @@ const services = [
     title: "Websites",
     description: "Custom-designed websites to showcase your properties and services online",
     image:
-        "https://www.realestatewebmasters.com/blog/image-optimization-and-seo-for-photos/",
+        "https://realestatewebmasters.com/blog/image-optimization-and-seo-for-photos/",
   },
 ]
 
