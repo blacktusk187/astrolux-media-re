@@ -28,7 +28,7 @@ const pricingPlans = [
     title: "Standard",
     price: "$350",
     description: "Properties from 1501 - 2500 sqf",
-    features: ["Up to 25 high-quality photos", "Premium editing", "36-hour delivery", "Drone photography"],
+    features: ["Up to 25 high-quality photos", "Premium editing", "24-hour delivery"],
   },
   {
     title: "Premium",
@@ -37,8 +37,7 @@ const pricingPlans = [
     features: [
       "Up to 35 high-quality photos",
       "Premium editing",
-      "36-hour delivery",
-      "Drone photography",
+      "24-hour delivery",
       "Fire added to fireplace",
       "Water added to pool",
     ],
@@ -49,7 +48,7 @@ const additionalServices: AdditionalService[] = [
   {
     title: "Walk-Thru Videos",
     description: "Immersive property tours",
-    image: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739211200/vib5tctvjrk3wojkrhxa.jpg",
+    image: "https://res.cloudinary.com/dkzt44dkk/video/upload/c_scale,w_761/v1739811381/pkrv3ng4xrfzksrkpbve.webm",
     options: [
       { name: "60 Second Instagram Video", details: "no music", price: "$449" },
       { name: "2-3 minute full Video", details: "with music", price: "$599" },
@@ -63,7 +62,8 @@ const additionalServices: AdditionalService[] = [
     options: [
       { name: "Add 6 drone shots to photo package", price: "$219" },
       { name: "Drone Photography only", price: "$319" },
-      { name: "Add Drone and Exterior photos at Twilight", price: "$299" },
+      { name: "Add Drone and Exterior photos\nat Twilight", price: "$299" },
+      { name: "Drone slow motion video", price: "$399" },
     ],
     note: "All Drone flights are weather and location dependent",
   },
