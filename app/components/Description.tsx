@@ -5,7 +5,7 @@ export default function Description() {
                 <h2 className="text-3xl font-bold mb-6 text-center">Sell your real estate faster with our professional photography services</h2>
                 <div className="max-w-3xl mx-auto text-center">
                     <p className="mb-4 text-lg leading-relaxed">
-                        Real estate photography in the Sea To Sky and Greater Vancouver Area. High-quality photos are the calling
+                        Real estate photography in the Sea To Sky and Greater Vancouver Area.{"\n"} High-quality photos are the calling
                         card of the property, they greatly increase the chances of an object being sold. Professional photos,
                         videos, or drone video real estate can be crucial to how potential buyers see the property.
                     </p>
