@@ -13,7 +13,7 @@ const pricingPlans = [
     title: "Standard",
     price: "$350",
     description: "Properties from 1501 - 2500 sqf",
-    features: ["Up to 25 high-quality photos", "Premium editing", "36-hour delivery", "Drone photography"],
+    features: ["Up to 25 high-quality photos", "Premium editing", "24-hour delivery", "Drone photography"],
   },
   {
     title: "Premium",
@@ -22,7 +22,7 @@ const pricingPlans = [
     features: [
       "Up to 35 high-quality photos",
       "Premium editing",
-      "36-hour delivery",
+      "24-hour delivery",
       "Drone photography",
       "Fire added to fireplace",
       "Water added to pool",
