@@ -70,7 +70,7 @@ const additionalServices: AdditionalService[] = [
   {
     title: "Virtual Add-Ons",
     description: "Enhance your listing with virtual staging and editing",
-    image: "https://storage.googleapis.com/pixlmob-prod-gallery-images/45QcLfNDxh52Y5b6RoAW/f685261b-224a-49ff-b73f-5c1dfd00b488_800x450",
+    image: "https://cdn.shopify.com/s/files/1/0052/2085/9992/files/virtual_staging_before.png?v=1712129221",
     options: [
       { name: "Virtual Twilight", details: "Per Image", price: "$30" },
       { name: "Virtual Staging", details: "Per Image", price: "$45" },
