@@ -2,7 +2,7 @@ export default function Description() {
     return (
         <section className="py-16 bg-white">
             <div className="container mx-auto px-4">
-                <h2 className="text-3xl font-bold mb-6 text-center">Professional Real Estate Photography</h2>
+                <h2 className="text-3xl font-bold mb-6 text-center">Sell your real estate faster with our professional photography services</h2>
                 <div className="max-w-3xl mx-auto text-center">
                     <p className="mb-4 text-lg leading-relaxed">
                         Real estate photography in the Sea To Sky and Greater Vancouver Area. High-quality photos are the calling
