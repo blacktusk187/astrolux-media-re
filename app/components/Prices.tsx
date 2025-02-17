@@ -58,7 +58,7 @@ const additionalServices: AdditionalService[] = [
   {
     title: "Drone Packages",
     description: "Aerial photography and videography",
-    image: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739234245/odcph9vkit4nzk4nar7v.jpg",
+    image: "https://static.wixstatic.com/media/f2ce18_848e335c99884cf3b0d70ad27d537d21~mv2.jpg/v1/fit/w_2416,h_1438,q_90/f2ce18_848e335c99884cf3b0d70ad27d537d21~mv2.webp",
     options: [
       { name: "Add 6 drone shots to photo package", price: "$219" },
       { name: "Drone Photography only", price: "$319" },
@@ -70,7 +70,7 @@ const additionalServices: AdditionalService[] = [
   {
     title: "Virtual Add-Ons",
     description: "Enhance your listing with virtual staging and editing",
-    image: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739211193/orwahe3wlug9h7jnqoox.jpg",
+    image: "https://storage.googleapis.com/pixlmob-prod-gallery-images/45QcLfNDxh52Y5b6RoAW/f685261b-224a-49ff-b73f-5c1dfd00b488_800x450",
     options: [
       { name: "Virtual Twilight", details: "Per Image", price: "$30" },
       { name: "Virtual Staging", details: "Per Image", price: "$45" },
@@ -84,7 +84,7 @@ const additionalServices: AdditionalService[] = [
   {
     title: "Floor Plans",
     description: "Detailed property layouts",
-    image: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739234517/br9rwifiv5tmrihqlsuq.jpg",
+    image: "https://cubicasa-wordpress-uploads.s3.amazonaws.com/uploads/2022/04/download-floorplans.png",
     options: [
       { name: "2D Black & White with Measurements", details: "Under 2500 sq ft", price: "$99" },
       { name: "2D Black & White with Measurements", details: "2501 – 4000 sq ft", price: "$139" },
