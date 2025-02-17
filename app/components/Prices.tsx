@@ -13,7 +13,7 @@ const pricingPlans = [
     title: "Standard Photography Package",
     price: "$350",
     description: "Properties from 1501 - 2500 sqf",
-    features: ["Up to 25 high-quality photos", "Premium editing", "24-hour delivery", "Drone photography"],
+    features: ["Up to 25 high-quality photos", "Premium editing", "24-hour delivery", "Fire added to fireplace"],
   },
   {
     title: "Premium Photography Package",
