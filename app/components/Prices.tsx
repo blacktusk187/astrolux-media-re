@@ -58,7 +58,7 @@ const additionalServices: AdditionalService[] = [
   {
     title: "Drone Packages",
     description: "Aerial photography and videography",
-    image: "https://static.wixstatic.com/media/f2ce18_848e335c99884cf3b0d70ad27d537d21~mv2.jpg/v1/fit/w_2416,h_1438,q_90/f2ce18_848e335c99884cf3b0d70ad27d537d21~mv2.webp",
+    image: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739817914/qneempxfcy6patneh92a.webp",
     options: [
       { name: "Add 6 drone shots to photo package", price: "$219" },
       { name: "Drone Photography only", price: "$319" },
