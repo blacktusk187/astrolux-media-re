@@ -21,8 +21,7 @@ export default function Description() {
                         <li className="bg-gray-100 px-3 py-1 rounded-full">Property Videography</li>
                         <li className="bg-gray-100 px-3 py-1 rounded-full">Drone Aerial Photography</li>
                         <li className="bg-gray-100 px-3 py-1 rounded-full">Virtual Tours</li>
-                        <li className="bg-gray-100 px-3 py-1 rounded-full">Sea To Sky</li>
-                        <li className="bg-gray-100 px-3 py-1 rounded-full">Greater Vancouver Area</li>
+
                     </ul>
                 </div>
             </div>
