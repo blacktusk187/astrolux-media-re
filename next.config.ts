@@ -29,7 +29,7 @@ const nextConfig: NextConfig = {
             },
             {
                 protocol: 'https',
-                hostname: 'storage.googleapis.com/pixlmob-prod-gallery-images',
+                hostname: 'storage.googleapis.com',
                 port: '',
                 pathname: '/**',
             },
