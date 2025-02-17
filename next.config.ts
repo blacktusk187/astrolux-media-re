@@ -27,6 +27,24 @@ const nextConfig: NextConfig = {
                 port: '',
                 pathname: '/**',
             },
+            {
+                protocol: 'https',
+                hostname: 'storage.googleapis.com/pixlmob-prod-gallery-images',
+                port: '',
+                pathname: '/**',
+            },
+            {
+                protocol: 'https',
+                hostname: 'static.wixstatic.com',
+                port: '',
+                pathname: '/**',
+            },
+            {
+                protocol: 'https',
+                hostname: 'cubicasa-wordpress-uploads.s3.amazonaws.com',
+                port: '',
+                pathname: '/**',
+            },
         ]
     }
 };
