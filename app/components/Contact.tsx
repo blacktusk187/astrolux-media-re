@@ -20,10 +20,10 @@ export default function Contact() {
             <div className="w-full md:w-1/2">
               <h2 className="text-3xl font-bold mb-8 text-center font-lexend">Contact Us</h2>
               <form className="space-y-4">
-                <Input type="text" placeholder="Your Name" />
-                <Input type="email" placeholder="Your Email" />
-                <Input type="tel" placeholder="Your Phone" />
-                <Textarea placeholder="Your Message" className="h-32" />
+                <Input type="text" name="name" placeholder="Your Name" />
+                <Input type="email" name="email" placeholder="Your Email" />
+                <Input type="tel" name="phone" placeholder="Your Phone" />
+                <Textarea placeholder="Your Message" name="message" className="h-32" />
                 <Button type="submit" className="w-full">
                   Send Message
                 </Button>
