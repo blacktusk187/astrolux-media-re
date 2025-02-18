@@ -83,7 +83,7 @@ const nextConfig: NextConfig = {
                     },
                 ],
             },
-        ]
+        ];
     },
 
 };
