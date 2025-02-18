@@ -20,7 +20,7 @@ const rightNavItems = [
 ]
 
 const socialLinks = [
-  { name: "Instagram", href: "https://www.instagram.com/astrolux_media", icon: Instagram },
+  { name: "Instagram", href: "https://www.instagram.com/astroluxmedia", icon: Instagram },
   { name: "LinkedIn", href: "https://www.linkedin.com/company/astrolux-media", icon: Linkedin },
 ]
 
@@ -66,7 +66,7 @@ export default function Navbar() {
               <div className="flex space-x-4">
                 {leftNavItems.map((item) => (
                     <Link key={item.name} href={item.href} onClick={(e) => handleClick(e, item.href)}>
-                      <Button variant="ghost" className="text-black hover:text-gray-700">
+                      <Button variant="ghost" className="text-black hover:text-gray-700 font-lexend">
                         {item.name}
                       </Button>
                     </Link>
@@ -75,7 +75,7 @@ export default function Navbar() {
               <div className="flex space-x-4 ml-4">
                 {rightNavItems.map((item) => (
                     <Link key={item.name} href={item.href} onClick={(e) => handleClick(e, item.href)}>
-                      <Button variant="ghost" className="text-black hover:text-gray-700">
+                      <Button variant="ghost" className="text-black hover:text-gray-700 font-lexend">
                         {item.name}
                       </Button>
                     </Link>
@@ -113,7 +113,7 @@ export default function Navbar() {
                   <div className="flex flex-col py-4">
                     {[...leftNavItems, ...rightNavItems].map((item) => (
                         <Link key={item.name} href={item.href} onClick={(e) => handleClick(e, item.href)} className="py-2">
-                          <Button variant="ghost" className="w-full text-left text-black hover:text-gray-700">
+                          <Button variant="ghost" className="w-full text-left text-black hover:text-gray-700 font-lexend">
                             {item.name}
                           </Button>
                         </Link>
