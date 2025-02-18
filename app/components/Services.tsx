@@ -39,7 +39,7 @@ const services = [
     title: "Websites",
     description: "Custom-designed websites to showcase your properties and services online",
     image:
-        "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739819846/zrzaxsgjk9kegqs2gjsk.webp",
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ]
 
@@ -72,7 +72,7 @@ export default function Services() {
   return (
       <section id="services" className="py-16 bg-gray-100">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Our Services</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 font-lexend">Our Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {services.map((service, index) => (
                 <Card key={index} className="overflow-hidden">
@@ -86,7 +86,7 @@ export default function Services() {
                     />
                   </div>
                   <CardHeader>
-                    <CardTitle>{service.title}</CardTitle>
+                    <CardTitle className="font-lexend">{service.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <CardDescription className="font-lexend">{service.description}</CardDescription>
@@ -96,10 +96,10 @@ export default function Services() {
           </div>
 
           <div className="mt-16">
-            <h3 className="text-2xl font-bold text-center mb-8">Photography & Video Services</h3>
+            <h3 className="text-2xl font-bold text-center mb-8 font-lexend">Photography & Video Services</h3>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               <div className="lg:col-span-2">
-                <h4 className="text-xl font-semibold mb-4">Photography Services</h4>
+                <h4 className="text-xl font-semibold mb-4 font-lexend">Photography Services</h4>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {photoServices.map((service, index) => (
                       <Card key={index} className="bg-white hover:bg-gray-50 transition-colors">
@@ -108,7 +108,7 @@ export default function Services() {
                             <service.icon className="h-5 w-5 text-gray-600" />
                           </div>
                           <div>
-                            <h5 className="font-medium text-sm">{service.title}</h5>
+                            <h5 className="font-medium text-sm font-lexend">{service.title}</h5>
                             <p className="text-sm text-gray-500">{service.description}</p>
                           </div>
                         </CardContent>
@@ -117,7 +117,7 @@ export default function Services() {
                 </div>
               </div>
               <div>
-                <h4 className="text-xl font-semibold mb-4">Video Services</h4>
+                <h4 className="text-xl font-semibold mb-4 font-lexend">Video Services</h4>
                 <div className="grid grid-cols-1 gap-4">
                   {videoServices.map((service, index) => (
                       <Card key={index} className="bg-white hover:bg-gray-50 transition-colors">
@@ -126,7 +126,7 @@ export default function Services() {
                             <service.icon className="h-5 w-5 text-gray-600" />
                           </div>
                           <div>
-                            <h5 className="font-medium text-sm">{service.title}</h5>
+                            <h5 className="font-medium text-sm font-lexend">{service.title}</h5>
                             <p className="text-sm text-gray-500">{service.description}</p>
                           </div>
                         </CardContent>
@@ -138,7 +138,7 @@ export default function Services() {
           </div>
 
           <div className="mt-16">
-            <h3 className="text-2xl font-bold text-center mb-8">Drone Services</h3>
+            <h3 className="text-2xl font-bold text-center mb-8 font-lexend">Drone Services</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {droneServices.map((service, index) => (
                   <Card key={index} className="bg-white hover:bg-gray-50 transition-colors">
@@ -147,7 +147,7 @@ export default function Services() {
                         <service.icon className="h-5 w-5 text-gray-600" />
                       </div>
                       <div>
-                        <h4 className="font-medium text-sm">{service.title}</h4>
+                        <h4 className="font-medium text-sm font-lexend">{service.title}</h4>
                         <p className="text-sm text-gray-500">{service.description}</p>
                       </div>
                     </CardContent>

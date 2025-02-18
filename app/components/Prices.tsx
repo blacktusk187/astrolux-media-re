@@ -12,7 +12,8 @@ type ServiceOption = {
 type AdditionalService = {
   title: string
   description: string
-  image: string
+  image?: string
+  video?: string
   options: ServiceOption[]
   note?: string
 }
@@ -48,7 +49,7 @@ const additionalServices: AdditionalService[] = [
   {
     title: "Walk-Thru Videos",
     description: "Immersive property tours",
-    image: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739812939/rpast4f2xcsm6svxyv3h.webp",
+    video: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739812939/rpast4f2xcsm6svxyv3h.webp",
     options: [
       { name: "60 Second Instagram Video", details: "no music", price: "$449" },
       { name: "2-3 minute full Video", details: "with music", price: "$599" },
@@ -98,7 +99,7 @@ export default function Prices() {
   return (
       <section id="pricing" className="py-16 bg-gray-100">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Our Pricing</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 font-lexend">Our Pricing</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
                 <Card key={index} className="flex flex-col">
@@ -136,18 +137,29 @@ export default function Prices() {
             ))}
           </div>
           <div className="mt-16">
-            <h3 className="text-2xl font-bold text-center mb-8">Additional Services</h3>
+            <h3 className="text-2xl font-bold text-center mb-8 font-lexend">Additional Services</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {additionalServices.map((service, index) => (
                   <Card key={index} className="flex flex-col overflow-hidden">
                     <div className="relative h-48">
-                      <Image
-                          src={service.image || "/placeholder.svg"}
-                          alt={service.title}
-                          layout="fill"
-                          objectFit="cover"
-                          className="transition-transform duration-300 hover:scale-105"
-                      />
+                      {service.video ? (
+                          <video
+                              src={service.video}
+                              autoPlay
+                              loop
+                              muted
+                              playsInline
+                              className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                          />
+                      ) : (
+                          <Image
+                              src={service.image || "/placeholder.svg"}
+                              alt={service.title}
+                              layout="fill"
+                              objectFit="cover"
+                              className="transition-transform duration-300 hover:scale-105"
+                          />
+                      )}
                     </div>
                     <CardHeader>
                       <CardTitle>{service.title}</CardTitle>
@@ -159,7 +171,7 @@ export default function Prices() {
                             {service.options.map((option, i) => (
                                 <li key={i} className="flex justify-between items-start">
                                   <div>
-                                    <span className="font-semibold">{option.name}</span>
+                                    <span className="font-semibold whitespace-pre-line">{option.name}</span>
                                     {option.details && <span className="block text-xs text-gray-500">{option.details}</span>}
                                   </div>
                                   <span className="font-semibold">{option.price}</span>

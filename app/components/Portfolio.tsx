@@ -43,43 +43,43 @@ export default function Portfolio() {
   const [photoIndex, setPhotoIndex] = useState(0)
 
   return (
-    <section id="portfolio" className="py-16">
-      <div className="container mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-12">Our Portfolio</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {portfolioItems.map((item, index) => (
-            <div
-              key={index}
-              className="relative h-64 overflow-hidden rounded-lg cursor-pointer"
-              onClick={() => {
-                setPhotoIndex(index)
-                setLightboxOpen(true)
-              }}
-            >
-              <Image
-                src={item.src || "/placeholder.svg"}
-                alt={item.alt}
-                layout="fill"
-                objectFit="cover"
-                className="transition-transform duration-300 hover:scale-110"
-              />
-            </div>
-          ))}
+      <section id="portfolio" className="py-16">
+        <div className="container mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12 font-lexend">Our Portfolio</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {portfolioItems.map((item, index) => (
+                <div
+                    key={index}
+                    className="relative h-64 overflow-hidden rounded-lg cursor-pointer"
+                    onClick={() => {
+                      setPhotoIndex(index)
+                      setLightboxOpen(true)
+                    }}
+                >
+                  <Image
+                      src={item.src || "/placeholder.svg"}
+                      alt={item.alt}
+                      layout="fill"
+                      objectFit="cover"
+                      className="transition-transform duration-300 hover:scale-110"
+                  />
+                </div>
+            ))}
+          </div>
         </div>
-      </div>
-      {lightboxOpen && (
-        <Lightbox
-          mainSrc={portfolioItems[photoIndex].src}
-          nextSrc={portfolioItems[(photoIndex + 1) % portfolioItems.length].src}
-          prevSrc={portfolioItems[(photoIndex + portfolioItems.length - 1) % portfolioItems.length].src}
-          onCloseRequest={() => setLightboxOpen(false)}
-          onMovePrevRequest={() => setPhotoIndex((photoIndex + portfolioItems.length - 1) % portfolioItems.length)}
-          onMoveNextRequest={() => setPhotoIndex((photoIndex + 1) % portfolioItems.length)}
-          imageTitle={portfolioItems[photoIndex].alt}
-          imageCaption={portfolioItems[photoIndex].alt}
-        />
-      )}
-    </section>
+        {lightboxOpen && (
+            <Lightbox
+                mainSrc={portfolioItems[photoIndex].src}
+                nextSrc={portfolioItems[(photoIndex + 1) % portfolioItems.length].src}
+                prevSrc={portfolioItems[(photoIndex + portfolioItems.length - 1) % portfolioItems.length].src}
+                onCloseRequest={() => setLightboxOpen(false)}
+                onMovePrevRequest={() => setPhotoIndex((photoIndex + portfolioItems.length - 1) % portfolioItems.length)}
+                onMoveNextRequest={() => setPhotoIndex((photoIndex + 1) % portfolioItems.length)}
+                imageTitle={portfolioItems[photoIndex].alt}
+                imageCaption={portfolioItems[photoIndex].alt}
+            />
+        )}
+      </section>
   )
 }
 
