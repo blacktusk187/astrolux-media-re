@@ -14,6 +14,7 @@ type LinkedInPost = {
     likes: number
     comments: number
     imageUrl?: string
+    postUrl: string // Add this line
 }
 
 // This is a mock function to simulate fetching LinkedIn posts
@@ -25,13 +26,13 @@ const fetchLinkedInPosts = async (): Promise<LinkedInPost[]> => {
     return [
         {
             id: "1",
-            content:
-                "📸 The Power of Professional Real Estate Photography: More Than Just Pretty Pictures",
+            content: "📸 The Power of Professional Real Estate Photography: More Than Just Pretty Pictures",
             author: "Tim Barnsley",
-            timestamp: "2025-02-15T10:30:00Z",
+            timestamp: "2025-02-18T10:30:00Z",
             likes: 45,
             comments: 12,
             imageUrl: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739370445/mgpxuy9xsmxpmnylglu7.jpg",
+            postUrl: "https://www.linkedin.com/posts/astrolux-media_realestate-photography-realestatemarketing-activity-7297341347177320448-bP7a?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAMwGOwB5gMUxVIfmzhYoHVi5EORCQhVdqs", // Add this line
         },
     ]
 }
@@ -64,7 +65,7 @@ export default function Blog() {
                                     <CardTitle className="font-lexend text-lg">{post.author}</CardTitle>
                                     <p className="text-sm text-gray-500">{new Date(post.timestamp).toLocaleDateString()}</p>
                                 </CardHeader>
-                                <CardContent className="flex-grow">
+                                <CardContent className="flex-grow flex flex-col">
                                     {post.imageUrl && (
                                         <div className="mb-4 relative h-48">
                                             <Image
@@ -76,11 +77,16 @@ export default function Blog() {
                                             />
                                         </div>
                                     )}
-                                    <p className="font-lexend mb-4">{post.content}</p>
-                                    <div className="flex justify-between text-sm text-gray-500">
+                                    <p className="font-lexend mb-4 flex-grow">{post.content}</p>
+                                    <div className="flex justify-between text-sm text-gray-500 mb-4">
                                         <span>{post.likes} Likes</span>
                                         <span>{post.comments} Comments</span>
                                     </div>
+                                    <Button asChild variant="outline" className="w-full">
+                                        <Link href={post.postUrl} target="_blank" rel="noopener noreferrer">
+                                            View on LinkedIn
+                                        </Link>
+                                    </Button>
                                 </CardContent>
                             </Card>
                         ))}
