@@ -9,7 +9,7 @@ const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-montserrat
 const jura = Jura({ subsets: ["latin"], variable: "--font-jura" })
 
 export const metadata = {
-  title: "Real Estate Photography",
+  title: "Astrolux Media - Real Estate Photography",
   description: "Professional real estate photography services",
   icons: {
     icon: "/favicon.ico",
