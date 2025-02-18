@@ -49,7 +49,7 @@ const additionalServices: AdditionalService[] = [
   {
     title: "Walk-Thru Videos",
     description: "Immersive property tours",
-    image: "https://res.cloudinary.com/dkzt44dkk/video/upload/v1739921521/ztuoolie4fce35pnvfyb.webm",
+    image: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739922237/wnt2ys8qdeyed7zwcohc.webp",
     options: [
       { name: "60 Second Instagram Video", details: "no music", price: "$449" },
       { name: "2-3 minute full Video", details: "with music", price: "$599" },
