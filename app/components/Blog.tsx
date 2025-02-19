@@ -11,8 +11,6 @@ type LinkedInPost = {
     content: string
     author: string
     timestamp: string
-    likes: number
-    comments: number
     imageUrl?: string
     postUrl: string // Add this line
 }
@@ -29,11 +27,18 @@ const fetchLinkedInPosts = async (): Promise<LinkedInPost[]> => {
             content: "📸 The Power of Professional Real Estate Photography: More Than Just Pretty Pictures",
             author: "Tim Barnsley",
             timestamp: "2025-02-18T10:30:00Z",
-            likes: 45,
-            comments: 12,
             imageUrl: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739370445/mgpxuy9xsmxpmnylglu7.jpg",
             postUrl:
                 "https://www.linkedin.com/posts/astrolux-media_realestate-photography-realestatemarketing-activity-7297341347177320448-bP7a?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAMwGOwB5gMUxVIfmzhYoHVi5EORCQhVdqs", // Add this line
+        },
+        {
+            id: "2",
+            content: "Drone Photography: Elevating Real Estate Marketing",
+            author: "Tim Barnsley",
+            timestamp: "2025-02-19T10:30:00Z",
+            imageUrl: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739971306/vlnnruadfl5rluwfqz2d.jpg",
+            postUrl:
+                "https://www.linkedin.com/posts/astrolux-media_drone-photography-elevating-real-estate-activity-7297967805922955264-c1CF?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAMwGOwB5gMUxVIfmzhYoHVi5EORCQhVdqs", // Add this line
         },
     ]
 }
@@ -79,10 +84,6 @@ export default function Blog() {
                                         </div>
                                     )}
                                     <p className="font-lexend mb-4 flex-grow">{post.content}</p>
-                                    <div className="flex justify-between text-sm text-gray-500 mb-4">
-                                        <span>{post.likes} Likes</span>
-                                        <span>{post.comments} Comments</span>
-                                    </div>
                                     <Button asChild variant="outline" className="w-full">
                                         <Link href={post.postUrl} target="_blank" rel="noopener noreferrer">
                                             View on LinkedIn
