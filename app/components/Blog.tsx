@@ -32,7 +32,8 @@ const fetchLinkedInPosts = async (): Promise<LinkedInPost[]> => {
             likes: 45,
             comments: 12,
             imageUrl: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739370445/mgpxuy9xsmxpmnylglu7.jpg",
-            postUrl: "https://www.linkedin.com/posts/astrolux-media_realestate-photography-realestatemarketing-activity-7297341347177320448-bP7a?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAMwGOwB5gMUxVIfmzhYoHVi5EORCQhVdqs", // Add this line
+            postUrl:
+                "https://www.linkedin.com/posts/astrolux-media_realestate-photography-realestatemarketing-activity-7297341347177320448-bP7a?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAMwGOwB5gMUxVIfmzhYoHVi5EORCQhVdqs", // Add this line
         },
     ]
 }
@@ -92,13 +93,6 @@ export default function Blog() {
                         ))}
                     </div>
                 )}
-                <div className="text-center mt-8">
-                    <Button asChild>
-                        <Link href="https://www.linkedin.com/company/astrolux-media" target="_blank" rel="noopener noreferrer">
-                            Follow Us on LinkedIn
-                        </Link>
-                    </Button>
-                </div>
             </div>
         </section>
     )
