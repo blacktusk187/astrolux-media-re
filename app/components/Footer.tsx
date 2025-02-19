@@ -13,8 +13,8 @@ export default function Footer() {
       <footer className="border-t font-lexend">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row justify-between items-center py-8 font-lexend">
-            <div className="mb-4 lg:mb-0 font-lexend">
-              <Link href="/" className="text-xl font-normal text-black font-lexend flex items-center gap-2">
+            <div className="mb-4 lg:mb-0">
+              <Link href="/" className="text-xl font-normal text-black font-jura flex items-center gap-2">
                 <LogoIcon className="w-12 h-12" />
                 Astrolux Media
               </Link>
