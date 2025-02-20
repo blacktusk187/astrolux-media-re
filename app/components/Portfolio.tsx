@@ -68,7 +68,6 @@ export default function Portfolio() {
                       layout="fill"
                       objectFit="cover"
                       className="transition-transform duration-300 hover:scale-110"
-                      loading="lazy"
                   />
                 </div>
             ))}

@@ -9,8 +9,8 @@ const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-montserrat
 const jura = Jura({ subsets: ["latin"], variable: "--font-jura" })
 
 export const metadata = {
-    title: "Real Estate Photography | Astrolux Media",
-    description: "Professional real estate photography services in the Sea To Sky and Greater Vancouver Area",
+    title: "Real Estate Photography",
+    description: "Professional real estate photography services",
     icons: {
         icon: "/favicon.ico",
         apple: "/apple-icon.png",
@@ -25,10 +25,13 @@ export default function RootLayout({
     return (
         <html lang="en" className={`scroll-smooth ${inter.className}`}>
         <head>
-            <title>{metadata.title}</title>
-            <meta name="description" content={metadata.description} />
             <link rel="icon" href="/favicon.ico" sizes="any" />
             <link rel="apple-touch-icon" href="/apple-icon.png" />
+            <link
+                rel="preload"
+                href="https://res.cloudinary.com/dkzt44dkk/image/upload/f_auto,q_auto,w_auto,c_scale,dpr_auto/v1740027413/m4bqq0vnrt8rknqlj7cj.webp"
+                as="image"
+            />
         </head>
         <body className={`font-sans ${lexend.variable} ${montserrat.variable} ${jura.variable}`}>
         <Navbar />
