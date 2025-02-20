@@ -45,6 +45,7 @@ export default function Contact() {
           toast({
             title: "Message Sent",
             description: "Thank you for your message. We'll get back to you soon!",
+            variant: "success",
             duration: 5000,
           })
           // Reset form fields
