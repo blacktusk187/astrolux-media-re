@@ -63,7 +63,7 @@ export default function Contact() {
             duration: 5000,
           })
         }
-      } catch (error) {
+      } catch {
         toast({
           title: "Error",
           description: "An unexpected error occurred. Please try again later.",
