@@ -100,6 +100,7 @@ export default function Contact() {
                       value={name}
                       name={name}
                       id="name"
+                      autoComplete={"name"}
                       onChange={(e) => setName(e.target.value)}
                       className={errors.name ? "border-red-500" : ""}
                   />
@@ -112,6 +113,7 @@ export default function Contact() {
                       value={email}
                       name={email}
                       id="email"
+                      autoComplete={"email"}
                       onChange={(e) => setEmail(e.target.value)}
                       className={errors.email ? "border-red-500" : ""}
                   />
@@ -122,6 +124,7 @@ export default function Contact() {
                        value={phone}
                        name={phone}
                        id="phone"
+                       autoComplete={"tel"}
                        onChange={(e) => setPhone(e.target.value)} />
                 <div>
                   <Textarea
@@ -130,6 +133,7 @@ export default function Contact() {
                       value={message}
                       name={message}
                       id="message"
+                      autoComplete={"message"}
                       onChange={(e) => setMessage(e.target.value)}
                   />
                   {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
