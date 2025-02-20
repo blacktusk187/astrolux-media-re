@@ -68,7 +68,7 @@ export default function Blog() {
                         {posts.map((post) => (
                             <Card key={post.id} className="flex flex-col">
                                 <CardHeader>
-                                    <CardTitle className="font-lexend text-lg">{post.author}</CardTitle>
+                                    <CardTitle className="font-lexend ">{post.author}</CardTitle>
                                     <p className="text-sm text-gray-500">{new Date(post.timestamp).toLocaleDateString()}</p>
                                 </CardHeader>
                                 <CardContent className="flex-grow flex flex-col">
