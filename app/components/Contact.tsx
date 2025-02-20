@@ -99,6 +99,7 @@ export default function Contact() {
                       placeholder="Your Name"
                       value={name}
                       name={name}
+                      id="name"
                       onChange={(e) => setName(e.target.value)}
                       className={errors.name ? "border-red-500" : ""}
                   />
@@ -110,6 +111,7 @@ export default function Contact() {
                       placeholder="Your Email"
                       value={email}
                       name={email}
+                      id="email"
                       onChange={(e) => setEmail(e.target.value)}
                       className={errors.email ? "border-red-500" : ""}
                   />
@@ -119,6 +121,7 @@ export default function Contact() {
                        placeholder="Your Phone"
                        value={phone}
                        name={phone}
+                       id="phone"
                        onChange={(e) => setPhone(e.target.value)} />
                 <div>
                   <Textarea
@@ -126,6 +129,7 @@ export default function Contact() {
                       className={`h-32 ${errors.message ? "border-red-500" : ""}`}
                       value={message}
                       name={message}
+                      id="message"
                       onChange={(e) => setMessage(e.target.value)}
                   />
                   {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
