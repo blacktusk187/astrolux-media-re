@@ -183,7 +183,7 @@ export default function Prices() {
                     </CardContent>
                     <CardFooter>
                       <Button variant="outline" className="w-full" asChild>
-                        <Link href={`mailto:barnsleyt@gmail.com?subject=${encodeURIComponent(service.title)}`}>
+                        <Link href={`mailto:tim@astroluxmedia.com?subject=${encodeURIComponent(service.title)}`}>
                           {service.title === "Walk-Thru Videos"
                               ? "Choose Walk-Thru"
                               : service.title === "Drone Packages"
