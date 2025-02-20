@@ -56,12 +56,17 @@ export default function Contact() {
           setErrors({})
         } else {
           const errorData = await response.json()
-          throw new Error(errorData.error || "Failed to send message")
+          toast({
+            title: "Error",
+            description: errorData.error || "Failed to send message. Please try again later.",
+            variant: "destructive",
+            duration: 5000,
+          })
         }
       } catch (error) {
         toast({
           title: "Error",
-          description: error instanceof Error ? error.message : "Failed to send message. Please try again later.",
+          description: "An unexpected error occurred. Please try again later.",
           variant: "destructive",
           duration: 5000,
         })
