@@ -15,6 +15,7 @@ export default function Contact() {
   const [phone, setPhone] = useState("")
   const [message, setMessage] = useState("")
   const [errors, setErrors] = useState<{ [key: string]: string }>({})
+  const [isSubmitting, setIsSubmitting] = useState(false)
   const { toast } = useToast()
 
   const validateForm = () => {
@@ -27,22 +28,44 @@ export default function Contact() {
     return Object.keys(newErrors).length === 0
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (validateForm()) {
-      const subject = encodeURIComponent("New Contact Form Submission")
-      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nMessage: ${message}`)
-      window.location.href = `mailto:tim@astroluxmedia.com?subject=${subject}&body=${body}`
-      toast({
-        title: "Message Sent",
-        description: "Thank you for your message. We'll get back to you soon!",
-        duration: 5000,
-      })
-      // Reset form fields
-      setName("")
-      setEmail("")
-      setPhone("")
-      setMessage("")
+      setIsSubmitting(true)
+      try {
+        const response = await fetch("/api/contact", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ name, email, phone, message }),
+        })
+
+        if (response.ok) {
+          toast({
+            title: "Message Sent",
+            description: "Thank you for your message. We'll get back to you soon!",
+            duration: 5000,
+          })
+          // Reset form fields
+          setName("")
+          setEmail("")
+          setPhone("")
+          setMessage("")
+        } else {
+          const errorData = await response.json()
+          throw new Error(errorData.error || "Failed to send message")
+        }
+      } catch (error) {
+        toast({
+          title: "Error",
+          description: error instanceof Error ? error.message : "Failed to send message. Please try again later.",
+          variant: "destructive",
+          duration: 5000,
+        })
+      } finally {
+        setIsSubmitting(false)
+      }
     } else {
       toast({
         title: "Error",
@@ -99,8 +122,34 @@ export default function Contact() {
                   />
                   {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
                 </div>
-                <Button type="submit" className="w-full">
-                  Send Message
+                <Button type="submit" className="w-full" disabled={isSubmitting}>
+                  {isSubmitting ? (
+                      <>
+                        <svg
+                            className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                        >
+                          <circle
+                              className="opacity-25"
+                              cx="12"
+                              cy="12"
+                              r="10"
+                              stroke="currentColor"
+                              strokeWidth="4"
+                          ></circle>
+                          <path
+                              className="opacity-75"
+                              fill="currentColor"
+                              d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                          ></path>
+                        </svg>
+                        Sending...
+                      </>
+                  ) : (
+                      "Send Message"
+                  )}
                 </Button>
               </form>
             </div>
