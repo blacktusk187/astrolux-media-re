@@ -9,37 +9,32 @@ const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-montserrat
 const jura = Jura({ subsets: ["latin"], variable: "--font-jura" })
 
 export const metadata = {
-  title: "Real Estate Photography | Astrolux Media",
-  description: "Professional real estate photography services in the Sea To Sky and Greater Vancouver Area",
-  icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-icon.png",
-  },
+    title: "Real Estate Photography | Astrolux Media",
+    description: "Professional real estate photography services in the Sea To Sky and Greater Vancouver Area",
+    icons: {
+        icon: "/favicon.ico",
+        apple: "/apple-icon.png",
+    },
 }
 
 export default function RootLayout({
-                                     children,
+                                       children,
                                    }: {
-  children: React.ReactNode
+    children: React.ReactNode
 }) {
-  return (
-      <html lang="en" className={`scroll-smooth ${inter.className}`}>
-      <head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="apple-touch-icon" href="/apple-icon.png" />
-        <link
-            rel="preload"
-            href="https://res.cloudinary.com/dkzt44dkk/image/upload/v1740027413/m4bqq0vnrt8rknqlj7cj.webp?f_auto,q_auto,w_1200,c_scale"
-            as="image"
-        />
-      </head>
-      <body className={`font-sans ${lexend.variable} ${montserrat.variable} ${jura.variable}`}>
-      <Navbar />
-      {children}
-      </body>
-      </html>
-  )
+    return (
+        <html lang="en" className={`scroll-smooth ${inter.className}`}>
+        <head>
+            <title>{metadata.title}</title>
+            <meta name="description" content={metadata.description} />
+            <link rel="icon" href="/favicon.ico" sizes="any" />
+            <link rel="apple-touch-icon" href="/apple-icon.png" />
+        </head>
+        <body className={`font-sans ${lexend.variable} ${montserrat.variable} ${jura.variable}`}>
+        <Navbar />
+        {children}
+        </body>
+        </html>
+    )
 }
 

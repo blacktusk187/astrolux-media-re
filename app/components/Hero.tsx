@@ -2,9 +2,6 @@ import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import Link from "next/link"
 
-const heroImageUrl = "https://res.cloudinary.com/dkzt44dkk/image/upload/v1740027413/m4bqq0vnrt8rknqlj7cj"
-const blurImageUrl = `${heroImageUrl}.webp?c_scale,w_20,q_10`
-
 export default function Hero() {
   return (
       <section
@@ -12,14 +9,12 @@ export default function Hero() {
           className="relative h-[calc(50vh+4rem)] md:h-[calc(70vh+4rem)] lg:h-[calc(80vh+4rem)] flex items-center justify-center"
       >
         <Image
-            src={heroImageUrl || "/placeholder.svg"}
-            alt="Luxurious home"
+            src="https://sjc.microlink.io/h7QNu15S0q-zzTFVhavdoL4DzBlEADeiyDtWjfEZc7dwnXPrT9lnzIwgXCg91eujAUWuA704uGwnPuCvLR4JAw.jpeg"
+            alt="Modern luxury mountain home at twilight with snow-capped peaks in background"
             fill
             sizes="100vw"
             quality={90}
             priority
-            placeholder="blur"
-            blurDataURL={blurImageUrl}
             className="object-cover z-0"
             loading="eager"
         />
