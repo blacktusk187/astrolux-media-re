@@ -97,7 +97,7 @@ export default function Contact() {
               />
             </div>
             <div className="w-full md:w-1/2">
-              <h2 className="text-3xl font-bold mb-8 text-center font-lexend">Contact Us</h2>
+              <h2 className="text-3xl font-normal mb-8 text-center font-lexend">Contact Us</h2>
               <form className="space-y-4" onSubmit={handleSubmit}>
                 <Input
                     id="name"

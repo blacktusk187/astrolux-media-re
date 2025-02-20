@@ -2,7 +2,7 @@ export default function Description() {
     return (
         <section className="py-16 bg-white">
             <div className="container mx-auto px-4">
-                <h2 className="text-3xl font-bold mb-6 text-center font-lexend">
+                <h2 className="text-3xl font-normal mb-6 text-center font-lexend">
                     Professional Real Estate Photography that sells
                 </h2>
                 <div className="max-w-3xl mx-auto text-center">
@@ -17,7 +17,7 @@ export default function Description() {
                     </p>
                 </div>
                 <div className="mt-8 text-center">
-                    <h3 className="text-xl font-semibold mb-4 font-lexend">Our Expertise</h3>
+                    <h3 className="text-xl font-normal mb-4 font-lexend">Our Expertise</h3>
                     <ul className="inline-flex flex-wrap justify-center gap-4 text-sm font-medium text-gray-600">
                         <li className="bg-gray-100 px-3 py-1 rounded-full">Real Estate Photography</li>
                         <li className="bg-gray-100 px-3 py-1 rounded-full">Property Videography</li>

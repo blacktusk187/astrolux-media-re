@@ -99,7 +99,7 @@ export default function Prices() {
   return (
       <section id="pricing" className="py-16 bg-gray-100">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12 font-lexend">Our Pricing</h2>
+          <h2 className="text-3xl font-normal text-center mb-12 font-lexend">Our Pricing</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
                 <Card key={index} className="flex flex-col">
@@ -137,7 +137,7 @@ export default function Prices() {
             ))}
           </div>
           <div className="mt-16">
-            <h3 className="text-2xl font-bold text-center mb-8 font-lexend">Additional Services</h3>
+            <h3 className="text-2xl font-normal text-center mb-8 font-lexend">Additional Services</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {additionalServices.map((service, index) => (
                   <Card key={index} className="flex flex-col overflow-hidden">

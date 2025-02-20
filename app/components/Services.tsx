@@ -72,7 +72,7 @@ export default function Services() {
   return (
       <section id="services" className="py-16 bg-gray-100">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12 font-lexend">Our Services</h2>
+          <h2 className="text-3xl font-normal text-center mb-12 font-lexend">Our Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {services.map((service, index) => (
                 <Card key={index} className="overflow-hidden">
@@ -96,10 +96,10 @@ export default function Services() {
           </div>
 
           <div className="mt-16">
-            <h3 className="text-2xl font-bold text-center mb-8 font-lexend">Photography & Video Services</h3>
+            <h3 className="text-2xl font-normal text-center mb-8 font-lexend">Photography & Video Services</h3>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               <div className="lg:col-span-2">
-                <h4 className="text-xl font-semibold mb-4 font-lexend">Photography Services</h4>
+                <h4 className="text-xl font-normal mb-4 font-lexend">Photography Services</h4>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {photoServices.map((service, index) => (
                       <Card key={index} className="bg-white hover:bg-gray-50 transition-colors">
@@ -117,7 +117,7 @@ export default function Services() {
                 </div>
               </div>
               <div>
-                <h4 className="text-xl font-semibold mb-4 font-lexend">Video Services</h4>
+                <h4 className="text-xl font-normal mb-4 font-lexend">Video Services</h4>
                 <div className="grid grid-cols-1 gap-4">
                   {videoServices.map((service, index) => (
                       <Card key={index} className="bg-white hover:bg-gray-50 transition-colors">
