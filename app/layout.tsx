@@ -2,6 +2,7 @@ import "./globals.css"
 import { Inter, Lexend, Montserrat, Jura } from "next/font/google"
 import Navbar from "./components/Navbar"
 import type React from "react"
+import { Toaster } from "@/components/ui/toaster"
 
 const inter = Inter({ subsets: ["latin"] })
 const lexend = Lexend({ subsets: ["latin"], variable: "--font-lexend" })
@@ -32,6 +33,7 @@ export default function RootLayout({
       <body className={`font-sans ${lexend.variable} ${montserrat.variable} ${jura.variable}`}>
         <Navbar />
         {children}
+        <Toaster />
       </body>
     </html>
   )
