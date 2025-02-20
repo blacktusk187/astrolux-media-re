@@ -14,16 +14,16 @@ export default function Contact() {
   const [email, setEmail] = useState("")
   const [phone, setPhone] = useState("")
   const [message, setMessage] = useState("")
-  const [errors, setErrors] = useState<{ [key: string]: string }>({})
+  const [errors, setErrors] = useState<{ [key: string]: boolean }>({})
   const [isSubmitting, setIsSubmitting] = useState(false)
   const { toast } = useToast()
 
   const validateForm = () => {
-    const newErrors: { [key: string]: string } = {}
-    if (!name.trim()) newErrors.name = "Name is required"
-    if (!email.trim()) newErrors.email = "Email is required"
-    if (email && !/\S+@\S+\.\S+/.test(email)) newErrors.email = "Email is invalid"
-    if (!message.trim()) newErrors.message = "Message is required"
+    const newErrors: { [key: string]: boolean } = {}
+    if (!name.trim()) newErrors.name = true
+    if (!email.trim()) newErrors.email = true
+    if (email && !/\S+@\S+\.\S+/.test(email)) newErrors.email = true
+    if (!message.trim()) newErrors.message = true
     setErrors(newErrors)
     return Object.keys(newErrors).length === 0
   }
@@ -71,7 +71,7 @@ export default function Contact() {
     } else {
       toast({
         title: "Error",
-        description: "Please correct the errors in the form.",
+        description: "Please fill in all required fields.",
         variant: "destructive",
         duration: 5000,
       })
@@ -94,72 +94,49 @@ export default function Contact() {
             <div className="w-full md:w-1/2">
               <h2 className="text-3xl font-bold mb-8 text-center font-lexend">Contact Us</h2>
               <form className="space-y-4" onSubmit={handleSubmit}>
-                <div className="space-y-1">
-                  <Input
-                      id="name"
-                      name="name"
-                      type="text"
-                      placeholder="Your Name"
-                      value={name}
-                      onChange={(e) => setName(e.target.value)}
-                      className={errors.name ? "border-red-500" : ""}
-                      autoComplete="name"
-                      aria-required="true"
-                      aria-invalid={errors.name ? "true" : "false"}
-                  />
-                  {errors.name && (
-                      <p className="text-red-500 text-xs" id="name-error">
-                        {errors.name}
-                      </p>
-                  )}
-                </div>
-                <div className="space-y-1">
-                  <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      placeholder="Your Email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      className={errors.email ? "border-red-500" : ""}
-                      autoComplete="email"
-                      aria-required="true"
-                      aria-invalid={errors.email ? "true" : "false"}
-                  />
-                  {errors.email && (
-                      <p className="text-red-500 text-xs" id="email-error">
-                        {errors.email}
-                      </p>
-                  )}
-                </div>
-                <div className="space-y-1">
-                  <Input
-                      id="phone"
-                      name="phone"
-                      type="tel"
-                      placeholder="Your Phone"
-                      value={phone}
-                      onChange={(e) => setPhone(e.target.value)}
-                      autoComplete="tel"
-                  />
-                </div>
-                <div className="space-y-1">
-                  <Textarea
-                      id="message"
-                      name="message"
-                      placeholder="Your Message"
-                      className={`h-32 ${errors.message ? "border-red-500" : ""}`}
-                      value={message}
-                      onChange={(e) => setMessage(e.target.value)}
-                      aria-required="true"
-                      aria-invalid={errors.message ? "true" : "false"}
-                  />
-                  {errors.message && (
-                      <p className="text-red-500 text-xs" id="message-error">
-                        {errors.message}
-                      </p>
-                  )}
-                </div>
+                <Input
+                    id="name"
+                    name="name"
+                    type="text"
+                    placeholder="Your Name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    className={errors.name ? "border-red-500" : ""}
+                    autoComplete="name"
+                    aria-required="true"
+                    aria-invalid={errors.name ? "true" : "false"}
+                />
+                <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="Your Email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className={errors.email ? "border-red-500" : ""}
+                    autoComplete="email"
+                    aria-required="true"
+                    aria-invalid={errors.email ? "true" : "false"}
+                />
+                <Input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    placeholder="Your Phone"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                    autoComplete="tel"
+                />
+                <Textarea
+                    id="message"
+                    name="message"
+                    placeholder="Your Message"
+                    className={`h-32 ${errors.message ? "border-red-500" : ""}`}
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    aria-required="true"
+                    aria-invalid={errors.message ? "true" : "false"}
+                />
                 <Button type="submit" className="w-full" disabled={isSubmitting}>
                   {isSubmitting ? (
                       <>
