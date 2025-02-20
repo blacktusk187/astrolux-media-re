@@ -128,7 +128,7 @@ export default function Prices() {
                   </CardContent>
                   <CardFooter>
                     <Button className="w-full" asChild>
-                      <Link href={`mailto:barnsleyt@gmail.com?subject=${encodeURIComponent(plan.title)}%20Photo%20Set`}>
+                      <Link href={`mailto:tim@astroluxmedia.com?subject=${encodeURIComponent(plan.title)}%20Photo%20Set`}>
                         Choose {plan.title} Set
                       </Link>
                     </Button>
