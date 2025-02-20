@@ -93,8 +93,8 @@ export default function Contact() {
             </div>
             <div className="w-full md:w-1/2">
               <h2 className="text-3xl font-bold mb-8 text-center font-lexend">Contact Us</h2>
-              <form className="space-y-6" onSubmit={handleSubmit}>
-                <div className="h-[70px] relative">
+              <form className="space-y-4" onSubmit={handleSubmit}>
+                <div className="space-y-1">
                   <Input
                       id="name"
                       name="name"
@@ -108,12 +108,12 @@ export default function Contact() {
                       aria-invalid={errors.name ? "true" : "false"}
                   />
                   {errors.name && (
-                      <p className="text-red-500 text-sm absolute bottom-0" id="name-error">
+                      <p className="text-red-500 text-xs" id="name-error">
                         {errors.name}
                       </p>
                   )}
                 </div>
-                <div className="h-[70px] relative">
+                <div className="space-y-1">
                   <Input
                       id="email"
                       name="email"
@@ -127,12 +127,12 @@ export default function Contact() {
                       aria-invalid={errors.email ? "true" : "false"}
                   />
                   {errors.email && (
-                      <p className="text-red-500 text-sm absolute bottom-0" id="email-error">
+                      <p className="text-red-500 text-xs" id="email-error">
                         {errors.email}
                       </p>
                   )}
                 </div>
-                <div className="h-[70px] relative">
+                <div className="space-y-1">
                   <Input
                       id="phone"
                       name="phone"
@@ -143,7 +143,7 @@ export default function Contact() {
                       autoComplete="tel"
                   />
                 </div>
-                <div className="h-[150px] relative">
+                <div className="space-y-1">
                   <Textarea
                       id="message"
                       name="message"
@@ -155,7 +155,7 @@ export default function Contact() {
                       aria-invalid={errors.message ? "true" : "false"}
                   />
                   {errors.message && (
-                      <p className="text-red-500 text-sm absolute bottom-0" id="message-error">
+                      <p className="text-red-500 text-xs" id="message-error">
                         {errors.message}
                       </p>
                   )}
