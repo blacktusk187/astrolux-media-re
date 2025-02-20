@@ -9,7 +9,7 @@ export default function Hero() {
           className="relative h-[calc(50vh+4rem)] md:h-[calc(70vh+4rem)] lg:h-[calc(80vh+4rem)] flex items-center justify-center"
       >
         <Image
-            src="https://sjc.microlink.io/h7QNu15S0q-zzTFVhavdoL4DzBlEADeiyDtWjfEZc7dwnXPrT9lnzIwgXCg91eujAUWuA704uGwnPuCvLR4JAw.jpeg"
+            src="hhttps://res.cloudinary.com/dkzt44dkk/image/upload/v1740027413/m4bqq0vnrt8rknqlj7cj.webp"
             alt="Modern luxury mountain home at twilight with snow-capped peaks in background"
             fill
             sizes="100vw"
