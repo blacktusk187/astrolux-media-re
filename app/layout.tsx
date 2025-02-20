@@ -2,7 +2,6 @@ import "./globals.css"
 import { Inter, Lexend, Montserrat, Jura } from "next/font/google"
 import Navbar from "./components/Navbar"
 import type React from "react"
-import { Toaster } from "@/components/ui/toaster"
 
 const inter = Inter({ subsets: ["latin"] })
 const lexend = Lexend({ subsets: ["latin"], variable: "--font-lexend" })
@@ -10,32 +9,37 @@ const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-montserrat
 const jura = Jura({ subsets: ["latin"], variable: "--font-jura" })
 
 export const metadata = {
-  title: "Astrolux Media - Real Estate Photography",
-  description: "Professional real estate photography services",
+  title: "Real Estate Photography | Astrolux Media",
+  description: "Professional real estate photography services in the Sea To Sky and Greater Vancouver Area",
   icons: {
     icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
     apple: "/apple-icon.png",
-    other: {
-      rel: "apple-touch-icon-precomposed",
-      url: "/apple-icon.png",
-    },
   },
 }
 
 export default function RootLayout({
-  children,
-}: {
+                                     children,
+                                   }: {
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`scroll-smooth ${inter.className}`}>
+      <html lang="en" className={`scroll-smooth ${inter.className}`}>
+      <head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/apple-icon.png" />
+        <link
+            rel="preload"
+            href="https://res.cloudinary.com/dkzt44dkk/image/upload/v1740027413/m4bqq0vnrt8rknqlj7cj.webp?f_auto,q_auto,w_1200,c_scale"
+            as="image"
+        />
+      </head>
       <body className={`font-sans ${lexend.variable} ${montserrat.variable} ${jura.variable}`}>
-        <Navbar />
-        {children}
-        <Toaster />
+      <Navbar />
+      {children}
       </body>
-    </html>
+      </html>
   )
 }
 

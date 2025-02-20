@@ -6,7 +6,10 @@ import Lightbox from "react-image-lightbox"
 import "react-image-lightbox/style.css"
 
 const portfolioItems = [
-  { src: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739370445/mgpxuy9xsmxpmnylglu7.jpg", alt: "7524 Pebble Creek Dr 1" },
+  {
+    src: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739370445/mgpxuy9xsmxpmnylglu7.jpg",
+    alt: "7524 Pebble Creek Dr 1",
+  },
   {
     src: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739454464/hw8qqkuegw5renjrhapv.jpg",
     alt: "7524 Pebble Creek Dr 2",
@@ -23,7 +26,10 @@ const portfolioItems = [
     src: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739458042/wf6a3opn81hdmkebg0ly.jpg",
     alt: "8031 Nicklaus North Blvd",
   },
-  { src: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739234517/br9rwifiv5tmrihqlsuq.jpg", alt: "The Cabin at Sweetwater Lane" },
+  {
+    src: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739234517/br9rwifiv5tmrihqlsuq.jpg",
+    alt: "The Cabin at Sweetwater Lane",
+  },
   {
     src: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739739308/ia3ncv6tffpvkmp6mdrv.jpg",
     alt: "7524 Pebble Creek Dr 4",
@@ -62,6 +68,7 @@ export default function Portfolio() {
                       layout="fill"
                       objectFit="cover"
                       className="transition-transform duration-300 hover:scale-110"
+                      loading="lazy"
                   />
                 </div>
             ))}
