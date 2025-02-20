@@ -97,7 +97,7 @@ export default function Navbar() {
             <div className="lg:hidden">
               <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
                 <SheetTrigger asChild>
-                  <Button variant="ghost" className="text-black hover:text-gray-700">
+                  <Button variant="ghost" className="text-black hover:text-gray-700" aria-label="Open menu">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
