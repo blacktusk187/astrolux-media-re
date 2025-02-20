@@ -9,7 +9,7 @@ export default function Hero() {
           className="relative h-[calc(50vh+4rem)] md:h-[calc(70vh+4rem)] lg:h-[calc(80vh+4rem)] flex items-center justify-center"
       >
         <Image
-            src="https://res.cloudinary.com/dkzt44dkk/image/upload/v1739373199/cma0ztkiepoyaiovnyjr.jpg"
+            src="https://res.cloudinary.com/dkzt44dkk/image/upload/v1740027413/m4bqq0vnrt8rknqlj7cj.webp"
             alt="Luxurious home"
             layout="fill"
             objectFit="cover"
