@@ -40,6 +40,15 @@ const fetchLinkedInPosts = async (): Promise<LinkedInPost[]> => {
             postUrl:
                 "https://www.linkedin.com/posts/astrolux-media_drone-photography-elevating-real-estate-activity-7297967805922955264-c1CF?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAMwGOwB5gMUxVIfmzhYoHVi5EORCQhVdqs", // Add this line
         },
+        {
+            id: "3",
+            content: "📸 Ultimate Guide: Preparing Your House for Professional Photography",
+            author: "Tim Barnsley",
+            timestamp: "2025-02-21T10:30:00Z",
+            imageUrl: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1740169380/zbpyyi0fndm2yabxmixq.jpg",
+            postUrl:
+                "https://www.linkedin.com/posts/astrolux-media_realestatephotography-homeselling-realestatetips-activity-7298798968644284416-s85t?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAMwGOwB5gMUxVIfmzhYoHVi5EORCQhVdqs", // Add this line
+        },
     ]
 }
 
