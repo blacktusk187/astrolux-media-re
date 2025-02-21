@@ -10,7 +10,7 @@ export default function Hero() {
         >
             <div className="absolute inset-0 z-0">
                 <Image
-                    src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/f_auto,q_auto,w_1600,h_900,c_fill/m4bqq0vnrt8rknqlj7cj`}
+                    src={`https://res.cloudinary.com/dkzt44dkk/image/upload/v1740027413/m4bqq0vnrt8rknqlj7cj.webp`}
                     alt="Luxurious mountain home"
                     fill
                     priority
