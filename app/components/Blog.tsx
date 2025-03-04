@@ -51,7 +51,7 @@ const fetchLinkedInPosts = async (): Promise<LinkedInPost[]> => {
         },
         {
             id: "4",
-            content: "📸 Is Your Listing Getting Overlooked?",
+            content: "Is Your Listing Getting Overlooked?",
             author: "Tim Barnsley",
             timestamp: "2025-03-04T10:30:00Z",
             imageUrl: "https://media.licdn.com/dms/image/v2/D5622AQGUd9cMkt2f5w/feedshare-shrink_800/B56ZViYFcJHEAg-/0/1741112237508?e=1744243200&v=beta&t=VUEBI9W_2NTS-ozdMriS-6qOafQ8vhtymYWjS5pPX84",
