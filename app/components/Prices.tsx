@@ -87,10 +87,10 @@ const additionalServices: AdditionalService[] = [
     description: "Detailed property layouts",
     image: "https://cubicasa-wordpress-uploads.s3.amazonaws.com/uploads/2022/04/download-floorplans.png",
     options: [
-      { name: "2D Black & White with Measurements", details: "Under 2500 sq ft", price: "$99" },
-      { name: "2D Black & White with Measurements", details: "2501 – 4000 sq ft", price: "$139" },
-      { name: "2D Black & White with Measurements", details: "Over 4001 sq ft", price: "$179" },
-      { name: "MLS Room Measurements", details: "Text Only", price: "$39" },
+      { name: "2D Black & White with Measurements", details: "Under 2500 sq ft", price: "$49" },
+      { name: "2D Black & White with Measurements", details: "2501 – 4000 sq ft", price: "$109" },
+      { name: "2D Black & White with Measurements", details: "Over 4001 sq ft", price: "$129" },
+      { name: "MLS Room Measurements", details: "Text Only", price: "$29" },
     ],
   },
 ]
