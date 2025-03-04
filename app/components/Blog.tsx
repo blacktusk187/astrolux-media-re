@@ -49,6 +49,15 @@ const fetchLinkedInPosts = async (): Promise<LinkedInPost[]> => {
             postUrl:
                 "https://www.linkedin.com/posts/astrolux-media_realestatephotography-homeselling-realestatetips-activity-7298798968644284416-s85t?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAMwGOwB5gMUxVIfmzhYoHVi5EORCQhVdqs", // Add this line
         },
+        {
+            id: "4",
+            content: "📸 Ultimate Guide: Preparing Your House for Professional Photography",
+            author: "Tim Barnsley",
+            timestamp: "2025-03-04T10:30:00Z",
+            imageUrl: "https://media.licdn.com/dms/image/v2/D5622AQGUd9cMkt2f5w/feedshare-shrink_800/B56ZViYFcJHEAg-/0/1741112237508?e=1744243200&v=beta&t=VUEBI9W_2NTS-ozdMriS-6qOafQ8vhtymYWjS5pPX84",
+            postUrl:
+                "https://www.linkedin.com/posts/astrolux-media_is-your-listing-getting-overlooked-activity-7302754027421765633-Ku71?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAMwGOwB5gMUxVIfmzhYoHVi5EORCQhVdqs", // Add this line
+        },
     ]
 }
 
