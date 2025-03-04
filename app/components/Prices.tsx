@@ -20,19 +20,19 @@ type AdditionalService = {
 
 const pricingPlans = [
   {
-    title: "Basic",
+    title: "Bronze",
     price: "$280",
     description: "Properties up to 1500 sqf",
     features: ["Up to 15 high-quality photos", "Premium editing", "24-hour delivery"],
   },
   {
-    title: "Standard",
+    title: "Silver",
     price: "$350",
     description: "Properties from 1501 - 2500 sqf",
     features: ["Up to 25 high-quality photos", "Premium editing", "24-hour delivery"],
   },
   {
-    title: "Premium",
+    title: "Gold",
     price: "$420",
     description: "Best for luxury properties",
     features: [
