@@ -7,6 +7,18 @@ import "react-image-lightbox/style.css"
 
 const portfolioItems = [
   {
+    src: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1741205493/ns8g5xgcopizawnzhood.webp",
+    alt: "Elevate 1",
+  },
+  {
+    src: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1741205493/cu8cluuugvhkznt9p1iz.webp",
+    alt: "Elevate 2",
+  },
+  {
+    src: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1741205494/fthz2sds5fhgzak8nzpx.webp",
+    alt: "Elevate 3",
+  },
+  {
     src: "https://res.cloudinary.com/dkzt44dkk/image/upload/v1739370445/mgpxuy9xsmxpmnylglu7.jpg",
     alt: "7524 Pebble Creek Dr 1",
   },
