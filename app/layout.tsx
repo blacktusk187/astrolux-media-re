@@ -11,8 +11,8 @@ const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-montserrat
 const jura = Jura({ subsets: ["latin"], variable: "--font-jura" })
 
 export const metadata = {
-    title: "Real Estate Photography",
-    description: "Professional real estate photography services",
+    title: "Real Estate & Architectural Photography",
+    description: "Video & photography for real estate, architecture, and interior design",
     icons: {
         icon: "/favicon.ico",
         apple: "/apple-icon.png",
