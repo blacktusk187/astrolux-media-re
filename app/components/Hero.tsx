@@ -15,7 +15,9 @@ export default function Hero() {
                     fill
                     priority
                     sizes="100vw"
-                    className="object-cover"
+                    style={{
+                        objectFit: 'cover',
+                    }}
                 />
             </div>
             <div className="z-10 text-center text-white">
